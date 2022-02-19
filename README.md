@@ -1,209 +1,71 @@
-# Neumorphism <!-- omit in toc -->
+# Particle Jekyll Theme
 
-> Neumorphism designed Jekyll theme for personal websites, portfolios and resumes.
+![](./particle.jpg)
 
-* Featured on [JAMstack Themes](https://jamstackthemes.dev/theme/jekyll-neumorphism/)
-* Featured on [Jekyll Themes](https://jekyll-themes.com/neumorphism/)
-* Featured on [jekyllthemes](http://jekyllthemes.org/themes/neumorphism/)
+This is a simple and minimalist template for Jekyll designed for developers that want to show of their portfolio.
 
-[![Open Issues](https://badgen.net/github/open-issues/longpdo/neumorphism)](https://github.com/longpdo/neumorphism/issues)
-[![License](https://badgen.net/github/license/longpdo/neumorphism)](LICENSE)
-<a href="https://jekyll-themes.com">
-    <img src="https://img.shields.io/badge/featured%20on-JT-red.svg" height="20" alt="Jekyll Themes Shield" >
-</a>
+The Theme features:
 
-[View Demo](https://longpdo.github.io/neumorphism/) · [Report Bug](https://github.com/longpdo/neumorphism/issues) · [Request Feature](https://github.com/longpdo/neumorphism/issues)
+- Gulp
+- SASS
+- Sweet Scroll
+- Particle.js
+- BrowserSync
+- Font Awesome and Devicon icons
+- Google Analytics
+- Info Customization
 
-<!-- TABLE OF CONTENTS -->
-## Table of Contents <!-- omit in toc -->
+## Basic Setup
 
-* [About The Project](#about-the-project)
-  * [Built With](#built-with)
-  * [Features](#features)
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-* [Usage](#usage)
-  * [Personalize and Customize](#personalize-and-customize)
-    * [_config.yml](#_configyml)
-    * [Github Metadata Plugin](#github-metadata-plugin)
-    * [_data/*.yml](#_datayml)
-    * [Particles.js](#particlesjs)
-* [Contributing](#contributing)
-* [License](#license)
-* [Acknowledgements](#acknowledgements)
+1. [Install Jekyll](http://jekyllrb.com)
+2. Clone the particle theme: `git clone https://github.com/nrandecker/particle.git`
+3. Edit `_config.yml` to personalize your site.
 
-<!-- ABOUT THE PROJECT -->
+## Site and User Settings
 
-## About The Project
+You have to fill some informations on `_config.yml` to customize your site.
 
-[![Project Screenshot][product-screenshot]](https://longpdo.github.io/neumorphism/)
+```
+# Site settings
+description: A blog about lorem ipsum dolor sit amet
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://localhost:3000" # the base hostname & protocol for your site
 
-This is a personal website built with `Jekyll` and hosted on `Github Pages`, which is based on the new `Neumorphism` design trend and was developed with a mobile-first approach. This can be used by developers, who want to showcase their resume and portfolio. If you want to use this for your own website, fork this repository and then refer to [personalize and customize](#personalize-and-customize).
-
-### Built With
-
-* [Jekyll](https://jekyllrb.com/)
-
-### Features
-
-* Mobile-First Responsive Design
-* Animated preloader animation
-* Landing Page with animated background with [particles.js](https://vincentgarreau.com/particles.js/), a Typing Carousel and animated social icons
-* Dark Neumorphism Design on main content
-* [Animations On Scroll](https://michalsnik.github.io/aos/)
-* Filterable *Skills* word cloud
-* [Github's API](https://developer.github.com/v3/) automatically populating the *Open Source Projects* section
-* Gulp dev workflow with [BrowserSync](https://browsersync.io/), [Autoprefixer](https://autoprefixer.github.io/) and `JS` & `SCSS` minifying.
-* [Google Analytics](https://analytics.google.com/)
-
-<!-- GETTING STARTED -->
-
-## Getting Started
-
-To get a local copy up and running follow these simple steps.
-
-`The commands and instructions I provide are for MacOS - please look up the specific commands for your OS on your own.`
-
-### Prerequisites
-
-* [NodeJS](https://nodejs.org/en/)
-
-```sh
-brew install node
+# User settings
+username: Lorem Ipsum
+user_description: Anon Developer at Lorem Ipsum Dolor
+user_title: Anon Developer
+email: anon@anon.com
+twitter_username: lorem_ipsum
+github_username:  lorem_ipsum
+gplus_username:  lorem_ipsum
 ```
 
-If you need to switch between Node versions regurlarly, I would recommend to install Node via [Node Version Manager](https://github.com/nvm-sh/nvm/blob/master/README.md#manual-install).
+**Don't forget to change your url before you deploy your site!**
 
-* [Jekyll](https://jekyllrb.com/)
+## Color and Particle Customization
+- Color Customization
+  - Edit the sass variables
+- Particle Customization
+  - Edit the json data in particle function in app.js
+  - Refer to [Particle.js](https://github.com/VincentGarreau/particles.js/) for help
 
-```sh
-gem install bundler jekyll
-```
+## Running the blog in local
 
-For more information, refer to [this](https://jekyllrb.com/docs/installation/).
+In order to compile the assets and run Jekyll on local you need to follow those steps:
 
-* [Yarn](https://yarnpkg.com/)
-
-```sh
-npm install -g yarn
-```
-
-### Installation
-
-> Recommended way: If you want to contribute to this theme or open issues due to problems implementing this on your own, I would recommend forking the repository directly. This makes it easier for me to solve open issues and questions or check pull requests.
-
-1.1: Fork the repository (using the `Fork` button at the top) and then clone the repository
-
-```sh
-# Replace {YOUR_USERNAME} with your actual username
-git clone https://github.com/{YOUR_USERNAME}/neumorphism.git
-```
-
-or
-
-1.2: Create your own repository (using the green `Use this template` button at the top) and then clone the repository
-
-```sh
-# Replace {YOUR_USERNAME}, {YOUR_REPOSITORY} with the actual values
-git clone https://github.com/{YOUR_USERNAME}/{YOUR_REPOSITORY}.git
-```
-
-2: Change directory into neumorphism
-
-```sh
-cd neumorphism
-```
-
-3: Install dependencies
-
-```sh
-yarn
-```
-
-<!-- USAGE EXAMPLES -->
-
-## Usage
-
-* Run and develop locally with live server at `http://localhost:4000`, this will also build production-ready `JS` and `SCSS` assets with every change
-
-```sh
-gulp
-```
-
-* After committing and pushing, see the `Settings` page of your repository to see where your site is published at via `Github Pages`.
-
-### Personalize and Customize
-
-#### _config.yml
-
-Edit `_config.yml` to personalize your site. For documentation, refer to [docs/config.md](https://github.com/longpdo/neumorphism/blob/master/docs/config.md).
-
-#### Github Metadata Plugin
-
-If you want to automatically have your Github repositories pulled for the *Open Source Projects* section, then you also need to authenticate yourself for the Github Metadata plugin to work.
-
-You need to generate a new personal access token on GitHub:
-
-* Go to the [Github Token site](https://github.com/settings/tokens/new)
-* Select the scope `public_repository`, and add a description.
-* Confirm and save the settings. Copy the token you see on the page.
-* Create a `.env` file inside your repository and add your generated `JEKYLL_GITHUB_TOKEN`:
-
-```text
-JEKYLL_GITHUB_TOKEN=0YOUR0GENERATED0TOKEN0
-```
-
-To complete the configuration for the Github Metadata plugin, you also need to change the value of `repository` inside `_config.yml`. After this, you should the Github Metadata plugin should work properly.
-
-For optimal results, you should make sure, that every Github project, you want included on this portfolio, has added following informations on Github:
-
-* Description
-* Homepage link, if there is a live version of it
-* Topics
-
-Example:
-![Github Repository Information Example][github-repo-info]
-
-#### _data/*.yml
-
-Edit files inside `_data` to add information to the portfolio. For documentation, refer to [docs/data.md](https://github.com/longpdo/neumorphism/blob/master/docs/data.md).
-
-#### Particles.js
-
-Edit `assets/particles.json` to customize the landing page backgorund animation. For more information, refer to [this](https://github.com/VincentGarreau/particles.js/#options).
-
-<!-- CONTRIBUTING -->
-
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<!-- LICENSE -->
+- Install [NodeJS](https://nodejs.org/)
+- Install [Jekyll](https://jekyllrb.com): `sudo gem install bundler jekyll`
+- Install [Yarn](https://yarnpkg.com/): `npm install -g yarn`
+- Install dependencies: `yarn`
+- Run: `gulp`
 
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+This theme is free and open source software, distributed under the The MIT License. So feel free to use this Jekyll theme anyway you want.
 
-<!-- ACKNOWLEDGEMENTS -->
+## Credits
 
-## Acknowledgements
-
-* [Font Awesome](https://fontawesome.com/)
-* [Normalize.css](https://necolas.github.io/normalize.css/)
-* Based Preloader on [Codrin Pavel's](https://codepen.io/zerospree/pen/aCjAz) version
-* Typing Carousel by [Gregory Schier](https://codepen.io/gschier/pen/jkivt)
-* Social Button Animation by [Stéphane Lyver](https://codepen.io/wouwi/pen/Lwrmi)
-* Adapted [Damian Jankowski's](https://codepen.io/dolaron/pen/rNadmOE) color palette for the neumorphism design
-* Based Timeline on [Krishna Babu's](https://codepen.io/krishnab/pen/OPwqbW) version
-
-<!-- MARKDOWN LINKS & IMAGES -->
-
-[product-screenshot]: https://raw.githubusercontent.com/longpdo/neumorphism/master/docs/screenshot.gif
-[github-repo-info]: https://raw.githubusercontent.com/longpdo/neumorphism/master/docs/github-repo-info.png
+This theme was partially designed with the inspiration from these fine folks
+- [Willian Justen](https://github.com/willianjusten/will-jekyll-template)
+- [Vincent Garreau](https://github.com/VincentGarreau/particles.js/)
